@@ -1,9 +1,14 @@
-﻿
-Console.WriteLine(" Написать программу вычисления значения функции y = f(a)");
+﻿Console.Clear();
+Console.WriteLine(" Написать программу вычисления значения функции y = f(a) где f(a)=x*x+1");
 
-double f(double x);
+void NameFunction(int namberF);
 {
-    double result = x*x+1;
-    return result;
+ namberF = 2 * namberF * namberF;
+ return namberF;
 }
-Console.WriteLine($"x = {result}");
+Console.Write("введите значение а: ");
+
+int namberA = int.Parse(Console.ReadLine());
+int namberY = NameFunction(namberA);
+
+Console.WriteLine($"y=2*{namberA}*{namberA}={namberY}");
