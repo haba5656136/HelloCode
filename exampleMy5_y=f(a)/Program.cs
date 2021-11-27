@@ -1,7 +1,7 @@
 ﻿Console.Clear();
 Console.WriteLine(" Написать программу вычисления значения функции y = f(a) где f(a)=x*x+1");
 
-if NameFunction(int namberF);
+void NameFunction(int namberF);
 {
  namberF = namberF * namberF + 1;
  return namberF;
