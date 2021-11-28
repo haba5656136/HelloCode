@@ -1,5 +1,12 @@
 ﻿// 7. Показать числа от -N до N
-for(int i = -5;i<6;i++)
+
+
+Console.WriteLine("введите N: ");
+
+int N = int.Parse(Console.ReadLine());
+
+for(int i = -N;i<=N;i++)
 {
-    Console.WriteLine(i);
+    Console.Write(i);
+    Console.Write(" ; ");
 }
