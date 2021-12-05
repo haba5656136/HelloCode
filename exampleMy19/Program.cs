@@ -8,7 +8,7 @@ Console.WriteLine("введите координату y:");
 int y = Convert.ToInt32(Console.ReadLine());
 
 if(x>0 & y>0) Console.WriteLine("точка находится в 1 ой четверти");
-if(x<0 & y>0) Console.WriteLine("точка находится во 2 ой четверти");
-if(x<0 & y<0) Console.WriteLine("точка находится в 3 ой четверти");
-if(x>0 & y<0) Console.WriteLine("точка находится в 4 ой четверти");
-if(x == 0 || y == 0) Console.WriteLine(" один из координат равен 0, не соответствует условию задачи!");
+else if(x<0 & y>0) Console.WriteLine("точка находится во 2 ой четверти");
+else if(x<0 & y<0) Console.WriteLine("точка находится в 3 ой четверти");
+else if(x>0 & y<0) Console.WriteLine("точка находится в 4 ой четверти");
+else (x == 0 || y == 0) Console.WriteLine(" один из координат равен 0, не соответствует условию задачи!");
