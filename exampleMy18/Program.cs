@@ -1,17 +1,31 @@
-﻿// 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
+﻿// 18.Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
 
-bool[] x = { true, false };
-bool[] y = { true, false };
-int count = 0;
+bool[] all = {true, false};
 
-for (int i = 0; i < x.Length; i++)
+bool result = true;
+
+for(int i = 0; i <all.Length; i++)
 {
-    for (int j = 0; j < y.Length; j++)
+    for(int j = 0; j <all.Length; j++)
     {
-        if ((!(x[i] || y[j])) == (!x[i] || !y[j])) count++;
-        Console.WriteLine($"{(!(x[i] || y[j])) == (!x[i] || !y[j])}");
-    }
+        if( !(all[i] || all[j]) == (!all[i] && all[j]))
+        {
+            Console.WriteLine($"Для набора x = {all[i]}, y = {all[j]} выражение истинно");
+        }
+        else
+        {
+            Console.WriteLine($"Для набора x = {all[i]}, y = {all[j]} выражение ложно");
+            result = false;
+            break;
+        }
 
+    }
 }
-if (count == 4) Console.WriteLine("Утверждение  ¬(X ⋁ Y) = ¬X ⋀ ¬Y истинно!");
-else Console.WriteLine("Утверждение  ¬(X ⋁ Y) = ¬X ⋀ ¬Y ложно!");
+
+if(result)
+{
+    Console.WriteLine($"Доказано что утверждение истинно");
+} else
+{
+    Console.WriteLine($"Доказано что утверждение ложно");
+}
