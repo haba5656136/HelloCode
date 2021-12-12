@@ -9,13 +9,11 @@ for (int i = 0; i < array.Length; i++)
     Console.Write(array[i] + " ");
 }
 Console.WriteLine();
+
 for (int i = 0; i < array.Length; i++)
 {
-
     if (array[i] > 0) sumPositive += array[i];
-
-    else { sumNegative += array[i]; }
-
+    else sumNegative += array[i];
 }
-Console.WriteLine(sumPositive);
-Console.WriteLine(sumNegative);
+Console.WriteLine("сумма положительных элементов  "+sumPositive);
+Console.WriteLine("сумма отрицательных элементов "+sumNegative);
