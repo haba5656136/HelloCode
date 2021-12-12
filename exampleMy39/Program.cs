@@ -2,14 +2,18 @@
 //Парой считаем первый и последний элемент, второй и предпоследний и т.д.
 
 Console.Clear();
-int[] array = new int[100];
+int[]array = {1,2,3,4,5,6,7,8,9,10};
 
-for (int i = 0; i < array.Length; i++)
+int[] res = new int[array.Length/2];
+int first = 0;
+int last = array.Length-1; 
+
+while (first < last)
 {
-    array[i] = new Random().Next(0, 100);
-    Console.Write(array[i] + " ");
+    int i =0;
+    res[i] = array[first]*array[last];
+    first++;
+    last--;
+    Console.Write(" "+res[i] );
+    i++;
 }
-
-Console.WriteLine($"произведение первого и последнего числа массива : {array[0]} * {array[array.Length-1]} = {array[0]*array[array.Length-1]}");
-длину-1
-//доделать цикл произведений
